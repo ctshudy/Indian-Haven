@@ -1,0 +1,7 @@
+Sitemap: http://www.jdpconstructioninc.com/sitemap.xml
+
+User-agent: *
+Disallow: /send_mail.php
+Disallow: /js/*
+Disallow: /images/*
+Disallow: /css/*

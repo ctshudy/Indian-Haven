@@ -1,0 +1,229 @@
+body, p, html, a, span, div, table, tr, td, tc{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    text-decoration: italic;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 0px 72px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 72px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 72px 5px rgba(0,0,0,0.75);
+}
+
+/* NAV BAR */
+
+.navbar {
+    font-size: 16px;
+    background-color: rgba(102, 18, 31, 1);
+    background: -webkit-linear-gradient(top, rgba(168, 27, 48, 1) 0%, rgba(102, 18, 31, 1) 100%);
+    background: linear-gradient(to bottom, rgba(168, 27, 48, 1) 0%, rgba(102, 18, 31, 1) 100%);
+    border-bottom-width: 0px;
+    color: white;
+    width: 100%;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.navbar-brand{
+    color: white !important;
+}
+
+.active{
+    text-decoration: underline !important;
+}
+/* END NAV BAR */
+/* FOOTER */
+
+
+
+footer{
+    margin-top: 40px;
+    min-height: 100px;
+    border-top: 1px solid white;
+    color: white;
+    width: 100%;
+    background-color: rgba(102, 18, 31, 1);
+    background: -webkit-linear-gradient(top, rgba(168, 27, 48, 1) 0%, rgba(102, 18, 31, 1) 100%);
+    background: linear-gradient(to bottom, rgba(168, 27, 48, 1) 0%, rgba(102, 18, 31, 1) 100%);
+}
+
+
+footer li{
+    list-style: none;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: white;
+}
+
+/* END FOOTER */
+
+.fa{
+    margin-bottom: 30px;
+    color: #A61B2F;
+}
+/* Content */
+
+.content-1{
+    margin-top: 30px;
+}
+/* END CONTENT */
+.btn-red { 
+  color: #ffffff; 
+  background-color: #A61B2F; 
+  border-color: #000000; 
+} 
+ 
+.btn-red:hover, 
+.btn-red:focus, 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  color: #ffffff; 
+  background-color: #d83636; 
+  border-color: #000000; 
+} 
+ 
+.btn-red:active, 
+.btn-red.active, 
+.open .dropdown-toggle.btn-red { 
+  background-image: none; 
+} 
+ 
+.btn-red.disabled, 
+.btn-red[disabled], 
+fieldset[disabled] .btn-red, 
+.btn-red.disabled:hover, 
+.btn-red[disabled]:hover, 
+fieldset[disabled] .btn-red:hover, 
+.btn-red.disabled:focus, 
+.btn-red[disabled]:focus, 
+fieldset[disabled] .btn-red:focus, 
+.btn-red.disabled:active, 
+.btn-red[disabled]:active, 
+fieldset[disabled] .btn-red:active, 
+.btn-red.disabled.active, 
+.btn-red[disabled].active, 
+fieldset[disabled] .btn-red.active { 
+  background-color: #B51B1B; 
+  border-color: #000000; 
+} 
+ 
+.btn-red .badge { 
+  color: #B51B1B; 
+  background-color: #ffffff; 
+}
+
+/* Content */
+.content {
+    padding-top: 30px;
+}
+
+/* Testimonials */
+p{
+    text-decoration: none !important;
+}
+blockquote{
+    text-decoration: none !important;
+}
+
+.testimonials blockquote {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border: medium none;
+    color: #666;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px;
+    position: relative;
+}
+.testimonials blockquote::before {
+    width: 0; 
+    height: 0;
+	right: 0;
+	bottom: 0;
+	content: " "; 
+	display: block; 
+	position: absolute;
+    border-bottom: 20px solid #fff;    
+	border-right: 0 solid transparent;
+	border-left: 15px solid transparent;
+	border-left-style: inset; /*FF fixes*/
+	border-bottom-style: inset; /*FF fixes*/
+}
+.testimonials blockquote::after {
+    width: 0;
+    height: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0 0;
+    border-color: #B51B1B transparent transparent transparent;
+}
+.testimonials .carousel-info img {
+    border: 1px solid #f5f5f5;
+    border-radius: 150px !important;
+    margin-bottom: 30px;
+    height: 75px;
+    padding: 3px;
+    width: 75px;
+}
+.testimonials .carousel-info {
+    overflow: hidden;
+}
+.testimonials .carousel-info img {
+    margin-right: 15px;
+}
+.testimonials .carousel-info span {
+    display: block;
+}
+.testimonials span.testimonials-name {
+    color: #B51B1B;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 23px 0 7px;
+}
+.testimonials span.testimonials-post {
+    color: #B51B1B;
+    font-size: 12px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+   
+    
+    a.footerText{
+        text-align: center;
+        margin: 0 auto;
+    }
+   
+    
+    .vert{
+        border-right: none;
+        text-align: center;
+        letter-spacing: inherit;
+        margin: 0 auto;
+    }
+    
+  
+}

@@ -1,0 +1,72 @@
+# Causes navigation to [sitename].com to display to index.html page
+DirectoryIndex index.html
+
+Options All -Indexes
+
+# Removes the server signature displayed on error pages
+ServerSignature Off
+
+# Sets the default character set
+AddDefaultCharset UTF-8
+
+# Sets the default langauge
+DefaultLanguage en-US
+
+# Compresses files for transfer
+<IfModule mod_php4.c>
+    php_value zlib.output_compression 16386
+</IfModule>
+
+# Enables rewrite engine
+RewriteEngine on
+
+# Denies malicious sites
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} ^Anarchie [OR]
+RewriteCond %{HTTP_USER_AGENT} ^ASPSeek [OR]
+RewriteCond %{HTTP_USER_AGENT} ^attach [OR]
+RewriteCond %{HTTP_USER_AGENT} ^autoemailspider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Xenu [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus.*Webster [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus [OR]
+RewriteCond %{HTTP_USER_AGENT} ^NinjaBot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Yandex
+RewriteRule ^.*$ http://english-1459533809.spampoison.com [R,L]
+
+# Sets headers
+<IfModule mod_headers.c>
+    # Set XSS Protection header
+    Header set X-XSS-Protection "1; mode=block"
+    # Prevents pages from being framed - Defends against CSRF
+    Header set X-Frame-Options DENY
+    # Prevents inline or cross-domain JavaScript from running.
+    Header set X-Content-Security-Policy "allow 'self';"
+    # Prevents mime based attacks
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+
+# Caching rules
+<IfModule mod_expires.c>
+    # Enable expirations
+    ExpiresActive On
+    # HTML
+    ExpiresByType text/html "access plus 1 week"
+    # Favicon
+    ExpiresByType image/x-icon "access plus 1 week"
+    # Images
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/jpg "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 week"
+    # Javascript
+    ExpiresByType application/javascript "access plus 1 week"
+    # CSS
+    ExpiresByType text/css "access plus 1 week"
+</IfModule>
+
+# Locks all .htaccess, ini, log, and md files
+<FilesMatch "\.(htaccess|ini|log|md)$">
+    Deny from all
+</FilesMatch>
